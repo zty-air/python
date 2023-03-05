@@ -2,21 +2,21 @@ from pyecharts.charts import Line
 from pyecharts.options import TitleOpts,VisualMapOpts,ToolboxOpts
 import json
 def Usa_Data():
-    with open("dataview\折线图数据\美国.txt","r",encoding="utf8") as f:
+    with open("python\dataview\折线图数据\美国.txt","r",encoding="utf8") as f:
         usa_data=f.read() 
         usa_data=usa_data.replace("jsonp_1629344292311_69436(","")[:-2]
         usa_data = json.loads(usa_data)
     f.close()
     return usa_data
 def Jp_Data():
-    with open("dataview\折线图数据\日本.txt","r",encoding="utf8") as fj:
+    with open("python\dataview\折线图数据\日本.txt","r",encoding="utf8") as fj:
         Jp_data=fj.read() 
         Jp_data= Jp_data.replace("jsonp_1629350871167_29498(","")[:-2]
         Jp_data= json.loads( Jp_data)
     fj.close()
     return Jp_data
 def In_Data():
-    with open("dataview\折线图数据\印度.txt","r",encoding="utf8") as fi:
+    with open("python\dataview\折线图数据\印度.txt","r",encoding="utf8") as fi:
         In_data=fi.read() 
         In_data=  In_data.replace("jsonp_1629350745930_63180(","")[:-2]
         In_data= json.loads( In_data)
@@ -47,10 +47,10 @@ line.set_global_opts(
 )
 line.render()
 
-print(usa_y)
-print()
-print(indan_y)
-print()
-print(jp_y)
+# print(usa_y)
+# print()
+# print(indan_y)
+# print()
+# print(jp_y)
 
 
